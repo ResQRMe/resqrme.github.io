@@ -45,17 +45,41 @@
             vertical-align: middle;
             line-height: 48px;
             display: flex;
-            justify-content: space-between;
+            justify-content:center;
             gap: 10px;
+        }
+
+        .noscript {
+            display: block;
+            margin: 200px;
+        }
+
+        .noscript ul {
+            margin-left: 20px;
         }
     </style>
 </head>
 <body>
 <main>
+
     <div class="redirect">
         <div class="loader"></div>
         Redirecting to localized landing page ...
     </div>
+    <noscript>
+        <div class="noscript">
+            <p>You dont have JavaScript enabled, so the automatic redirect won't work.</p>
+            <ul>
+                <li>
+                    <a href="./de/">English version</a>
+                </li>
+                <li>
+                    <a href="./en">German version</a>
+                </li>
+            </ul>
+        </div>
+
+    </noscript>
 </main>
 <script>
     const lang = navigator.language || navigator.userLanguage;
